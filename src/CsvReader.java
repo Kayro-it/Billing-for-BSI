@@ -26,7 +26,7 @@ public class CsvReader {
         csv.setTerminalNumber(Integer.parseInt(scanner.next()));
         csv.setReferNumber(Integer.parseInt(scanner.next()));
         bill.add(csv);
-klkl
+klklAsdstgrf
     }while(scanner.hasNext());
     }
 
