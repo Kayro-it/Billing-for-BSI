@@ -7,6 +7,11 @@ public class CsvObjectCreator {
     private int price;
     private int presistentNumber;
     private int landDate;
+
+    public int getTerminalNumber() {
+        return terminalNumber;
+    }
+
     private int terminalNumber;
     private int referNumber;
 

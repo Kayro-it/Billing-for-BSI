@@ -6,6 +6,10 @@ public class CsvReader {
     private String filePath;
     private Scanner scanner;
     private String delimiter;
+    public ArrayList<CsvObjectCreator> getBill() {
+        return bill;
+    }
+
     ArrayList<CsvObjectCreator> bill = new ArrayList<CsvObjectCreator>();
 
     public CsvReader(String filePath) throws FileNotFoundException {
@@ -29,6 +33,7 @@ public class CsvReader {
 
     }while(scanner.hasNext());
     }
+
 
 
 
