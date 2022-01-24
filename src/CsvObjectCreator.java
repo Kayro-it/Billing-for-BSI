@@ -1,25 +1,25 @@
 public class CsvObjectCreator {
-    private int row;
-    private int transactionDate;
-    private int transactionHour;
-    private int transactionType;
-    private int terminalType;
-    private int price;
-    private int presistentNumber;
-    private int landDate;
-    private int referNumber;
-    private int terminalNumber;
+    private String row;
+    private String  transactionDate;
+    private String transactionHour;
+    private String transactionType;
+    private String terminalType;
+    private String price;
+    private String presistentNumber;
+    private String landDate;
+    private String referNumber;
+    private String terminalNumber;
 
     public CsvObjectCreator(){
 
     }
 
 
-    public void setRow(int row) {
+    public void setRow(String row) {
         this.row = row;
     }
 
-    public void setTransactionDate(int transactionDate) {
+    public void setTransactionDate(String transactionDate) {
         this.transactionDate = transactionDate;
     }
 

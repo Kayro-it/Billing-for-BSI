@@ -8,24 +8,26 @@ public class CsvReader {
     private String delimiter;
     private ArrayList<CsvObjectCreator> bill = new ArrayList<CsvObjectCreator>();
 
-    public CsvReader(String filePath,String delimiter) throws FileNotFoundException {
+    public CsvReader(String filePath,String delimiter)  {
         this.filePath = filePath;
-        scanner.useDelimiter(delimiter);
-        scanner = new Scanner(new File(filePath));
+//        scanner.useDelimiter(delimiter);
+
     }
-    public void collectionCreator() {
+    public void collectionCreator()throws FileNotFoundException {
+        scanner = new Scanner(new File(this.filePath));
+        scanner.useDelimiter(",");
         do {
             CsvObjectCreator csv = new CsvObjectCreator();
-            csv.setRow(Integer.parseInt(scanner.next()));
-            csv.setTransactionDate(Integer.parseInt(scanner.next()));
-            csv.setTransactionHour(Integer.parseInt(scanner.next()));
-            csv.setTransactionType(Integer.parseInt(scanner.next()));
-            csv.setTerminalType(Integer.parseInt(scanner.next()));
-            csv.setPrice(Integer.parseInt(scanner.next()));
-            csv.setPresistentNumber(Integer.parseInt(scanner.next()));
-            csv.setLandDate(Integer.parseInt(scanner.next()));
-            csv.setTerminalNumber(Integer.parseInt(scanner.next()));
-            csv.setReferNumber(Integer.parseInt(scanner.next()));
+            csv.setRow((scanner.nextInt()));
+            csv.setTransactionDate((scanner.nextInt()));
+            csv.setTransactionHour((scanner.nextInt()));
+            csv.setTransactionType((scanner.nextInt()));
+            csv.setTerminalType((scanner.nextInt()));
+            csv.setPrice((scanner.nextInt()));
+            csv.setPresistentNumber((scanner.nextInt()));
+            csv.setLandDate((scanner.nextInt()));
+            csv.setTerminalNumber((scanner.nextInt()));
+            csv.setReferNumber((scanner.nextInt()));
             bill.add(csv);
 
         } while (scanner.hasNext());

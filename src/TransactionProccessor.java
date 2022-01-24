@@ -13,11 +13,11 @@ public class TransactionProccessor {
 
 
     public TransactionProccessor() throws IOException {
-    report = new CsvReader(filePath,",");
-    report.collectionCreator();
-
 
     }
+
+
+
     public void terminalSeperator(){
         Iterator<CsvObjectCreator> it = report.getBill().iterator();
         if(it.hasNext()){
@@ -29,10 +29,14 @@ public class TransactionProccessor {
         }
 }
 
-    public void setFilePath(String filePath){
+    public void setFilePath(String filePath)throws IOException{
         this.filePath = filePath;
+        report = new CsvReader(filePath,",");
+        report.collectionCreator();
     }
 
-
+    public ArrayList<Integer> getArray(){
+        return terminalList;
+    }
 
 }

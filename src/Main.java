@@ -1,18 +1,20 @@
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.Iterator;
 
 public class Main {
-
-
     public static void main(String[] args) throws IOException{
         Scanner scanner = new Scanner(System.in);
-        String filePath;
-        filePath = scanner.nextLine();
+        String filePath = scanner.nextLine();
 
-        TransactionProccessor report =new TransactionProccessor();
-        report.setFilePath(filePath);
+        TransactionProccessor transaction = new TransactionProccessor();
+        transaction.setFilePath(filePath);
+        transaction.terminalSeperator();
 
-        report.terminalSeperator();
+        Iterator<Integer> it = transaction.getArray().iterator();
+        if(it.hasNext()){
+            System.out.println(it.next());
+        }
 
-    }
+}
 }
