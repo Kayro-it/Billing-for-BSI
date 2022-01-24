@@ -7,15 +7,13 @@ public class CsvObjectCreator {
     private int price;
     private int presistentNumber;
     private int landDate;
-    private int terminalNumber;
     private int referNumber;
+    private int terminalNumber;
 
     public CsvObjectCreator(){
 
     }
-    public int getTerminalNumber() {
-        return terminalNumber;
-    }
+
 
     public void setRow(int row) {
         this.row = row;
@@ -57,6 +55,44 @@ public class CsvObjectCreator {
         this.referNumber = referNumber;
     }
 
+    public int getRow() {
+        return row;
+    }
 
+    public int getTransactionDate() {
+        return transactionDate;
+    }
+
+    public int getTransactionHour() {
+        return transactionHour;
+    }
+
+    public int getTransactionType() {
+        return transactionType;
+    }
+
+    public int getTerminalType() {
+        return terminalType;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public int getPresistentNumber() {
+        return presistentNumber;
+    }
+
+    public int getLandDate() {
+        return landDate;
+    }
+
+    public int getReferNumber() {
+        return referNumber;
+    }
+
+    public int getTerminalNumber() {
+        return terminalNumber;
+    }
 
 }

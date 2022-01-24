@@ -1,23 +1,38 @@
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Iterator;
+
 
 
 public class TransactionProccessor {
-    private ArrayList<String> terminalList = new ArrayList<>();
-    private Scanner filePath;
+    private ArrayList<Integer> terminalList = new ArrayList<>();
+    private ArrayList<TransactionDetails> terminal = new ArrayList<>();
+    private String filePath;
     private CsvReader report;
 
 
     public TransactionProccessor() throws IOException {
-    filePath = new Scanner(System.in);
-    report = new CsvReader(filePath.nextLine());
+    report = new CsvReader(filePath,",");
     report.collectionCreator();
 
 
     }
     public void terminalSeperator(){
+        Iterator<CsvObjectCreator> it = report.getBill().iterator();
+        if(it.hasNext()){
+            int input;
+            if(!terminalList.contains(input = it.next().getTerminalNumber())){
+                terminalList.add(input);
+            }
 
+        }
 }
+
+    public void setFilePath(String filePath){
+        this.filePath = filePath;
+    }
+
+
 
 }
